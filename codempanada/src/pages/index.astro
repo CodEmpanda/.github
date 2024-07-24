@@ -8,9 +8,17 @@ import OurMision from "../components/OurMision.astro";
 import OurVision from "../components/OurVision.astro";
 import OurValues from "../components/OurValues.astro";
 import Projects from "../components/Projects.astro";
+
+const Title: Readonly<string> = "Codempanada";
+const Description: Readonly<string> = `
+  Since 2024 Codempanada has been created to make changes in the world as we know it,
+  help us and join us to reach as many people as possible. our mission and vision is 
+  to try to offer a wide variety of software or libraries that can be used freely and 
+  even for free so that anyone who wants to contribute their bit can do it.
+  `;
 ---
 
-<Layout title="Welcome to Astro." , description="">
+<Layout title={Title} , description={Description}>
   <main>
     <Hero />
     <OurMision />
