@@ -1,32 +1,35 @@
 ---
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.min.css";
 
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
+const pathIcon: string = "/codempanada/favicon.svg";
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/codempanada/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="w-100">
-		<Navbar />
-		<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={pathIcon} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="w-100">
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
 </html>
-<style>
-</style>
+<script>
+  import "bootstrap/dist/js/bootstrap.bundle.min.js";
+</script>
