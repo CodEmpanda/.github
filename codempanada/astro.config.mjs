@@ -5,12 +5,10 @@ export default defineConfig({
     site: "https://codempanada.github.io",
     base: "/",
     output: "static",
+    trailingSlash: 'ignore',
+    compressHTML: true,
+    integrations: [],
     redirects:{
-        '/': "/.github",
-        '/codempanada': '/.github',
-        'other': {
-            status: 302,
-            destination: "/.github",
-        }
+        '/codempanada': '/',
     }
 });
