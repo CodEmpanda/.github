@@ -9,20 +9,20 @@ const ListIconSocialNetwork: Readonly<SocialNetwork[]> = Object.freeze([
   {
     title: "LinkedIn",
     nameSvg: "bi-linkedin",
-    url: "https://www.linkedin.com/in/eli-ezer-ramirez/",
+    url: "/codempanada", // Change next feature
   },
   {
     title: "Gmail",
     nameSvg: "bi-mailbox",
-    url: `mailto:ramirez.ruiz.eliezer.reuven@gmail.com`,
+    url: `/codempanada`, // Change next feature
   },
   {
     title: "Github",
     nameSvg: "bi-github",
-    url: "https://github.com/EliezerRamirezRuiz",
+    url: "/codempanada", // Change next feature
   },
-  { title: "Twitter", nameSvg: "bi-twitter-x", url: "/" },
-  { title: "Reddit", nameSvg: "bi-reddit", url: "/" },
+  { title: "Twitter", nameSvg: "bi-twitter-x", url: "/codempanada" }, // Change next feature
+  { title: "Reddit", nameSvg: "bi-reddit", url: "/codempanada" }, // Change next feature
 ]);
 
 interface ILink {
@@ -39,7 +39,7 @@ const FooterLink: Readonly<ILink[]> = Object.freeze([
 ]);
 ---
 
-<footer class="mt-3">
+<footer class="mt-5">
   <div class="d-flex flex-column mx-auto" id="container-footer">
     <div class="d-flex flex-column justify-content-center align-items-center">
       <h5 class="display-5 text-center">¿Why contribute to open source?</h5>
@@ -55,7 +55,9 @@ const FooterLink: Readonly<ILink[]> = Object.freeze([
         qui animi! Reiciendis.
       </p>
     </div>
-    <div class="d-inline-flex align-items-center mx-5">
+    <div
+      class="d-inline-flex justify-content-center align-items-center mx-5 gap-2"
+    >
       {
         ListIconSocialNetwork.map((item) => (
           <div class="p-2">
@@ -71,35 +73,31 @@ const FooterLink: Readonly<ILink[]> = Object.freeze([
       class="d-flex flex-column flex-md-row justify-content-around align-items-center py-3"
     >
       <div
-        class="d-flex flex-sm-column flex-md-row justify-content-center align-items-center flex-grow-1"
+        class="d-flex flex-sm-column flex-md-row justify-content-center align-items-center flex-fill"
       >
         <p class="text-center text-wrap w-75">
           Developed with
           <a href="https://astro.build/">Astro Framework</a>
         </p>
         <hr />
-        <p class="text-centertext-wrap" id="text-powered">
+        <p class="text-center text-wrap" id="text-powered">
           Powered by <strong
-            ><a href="https://vercel.com/" target="_blank">Vercel</a>
+            ><a href="https://vercel.com/" target="_blank">Github Pages</a>
           </strong>
         </p>
       </div>
       <div
         class="d-flex flex-row justify-content-center justify-content-md-end flex-fill flex-wrap px-sm-1 gap-2"
       >
-        <div
-          class="d-flex flex-row justify-content-center justify-content-md-end flex-fill flex-wrap px-sm-1 gap-3"
-        >
-          {
-            FooterLink.map((item) => (
-              <span class="">
-                <a class="nav-link" href={item.url}>
-                  {item.name}
-                </a>
-              </span>
-            ))
-          }
-        </div>
+        {
+          FooterLink.map((item) => (
+            <span class="">
+              <a class="nav-link" href={item.url}>
+                {item.name}
+              </a>
+            </span>
+          ))
+        }
       </div>
     </div>
     <div
@@ -127,8 +125,8 @@ const FooterLink: Readonly<ILink[]> = Object.freeze([
     width: 10%;
     padding: 0;
     margin: 0;
-    size: 0;
+    size: 1;
     rotate: -90deg;
-    background: linear-gradient(to right, transparent, black, transparent);
+    background: black;
   }
 </style>
