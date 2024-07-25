@@ -1,38 +1,43 @@
+---
+interface ILink {
+  name: string;
+  url: string;
+}
+
+const LinkNavbar: Readonly<ILink[]> = Object.freeze([
+  { name: "Home", url: "#hero" },
+  { name: "Mision", url: "#our-mision" },
+  { name: "Vision", url: "#our-vision" },
+  { name: "Values", url: "#our-values" },
+  { name: "Projects", url: "#projects" },
+]);
+---
+
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-  <div class="d-flex ">
-    <div class="">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        {
+          LinkNavbar.map((item) => (
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#our-mision">Mision</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#our-vision">Vision</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#our-values">Values</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-        </ul>
-      </div>
+          <a class="nav-link" href={item.url}>{item.name}</a>
+        </li>
+          ))
+        }
+      </ul>
     </div>
-    <div class="">
+    <div class="d-flex">
       <a class="navbar-brand" href="/codempanada">Codempanada</a>
     </div>
   </div>
