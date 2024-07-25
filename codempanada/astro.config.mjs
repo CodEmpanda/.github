@@ -8,4 +8,7 @@ export default defineConfig({
     trailingSlash: 'ignore',
     compressHTML: true,
     integrations: [],
+    redirects: {
+        "/": "/.github/"
+    }
 });
