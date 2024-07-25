@@ -9,6 +9,6 @@ export default defineConfig({
     compressHTML: true,
     integrations: [],
     redirects: {
-        "/": "/.github/"
+        "": "/.github/"
     }
 });
