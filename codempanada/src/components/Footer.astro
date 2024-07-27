@@ -12,16 +12,12 @@ const ListIconSocialNetwork: Readonly<SocialNetwork[]> = Object.freeze([
     url: "https://www.linkedin.com/company/codempanada/", // Change next feature
   },
   {
-    title: "Gmail",
-    nameSvg: "bi-mailbox",
-    url: `/`, // Change next feature
-  },
-  {
     title: "Github",
     nameSvg: "bi-github",
-    url: "https://github.com/Codempanada", // Change next feature
+    url: "https://github.com/Codempanada",
   },
-  { title: "Twitter", nameSvg: "bi-twitter-x", url: "/" }, // Change next feature
+  // { title: "Gmail", nameSvg: "bi-mailbox", url: `/`},
+  // { title: "Twitter", nameSvg: "bi-twitter-x", url: "/" },
 ]);
 
 interface ILink {
@@ -81,7 +77,8 @@ const FooterLink: Readonly<ILink[]> = Object.freeze([
         <hr />
         <p class="text-center text-wrap" id="text-powered">
           Powered by <strong
-            ><a href="https://pages.github.com/" target="_blank">Github Pages</a>
+            ><a href="https://pages.github.com/" target="_blank">Github Pages</a
+            >
           </strong>
         </p>
       </div>
