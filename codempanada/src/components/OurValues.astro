@@ -1,19 +1,38 @@
-<div
-  class="d-flex flex-column justify-content-center align-items-center"
-  id="our-values"
->
-  <h2 class="text-center display-2">Values</h2>
-  <p class="lead fst-italic text-center text-wrap w-50">
+---
+import { Picture } from "astro:assets";
+
+import ValuesImage from "../../public/values.png";
+
+const title: Readonly<string> = `Values`;
+const text: Readonly<string> = `
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sed debitis
     nulla consequatur recusandae, illum incidunt perferendis expedita odio!
     Excepturi, placeat sed minus nobis doloribus dolorem quos porro minima,
     quidem maiores temporibus corporis. Neque, dolore reprehenderit veniam
     necessitatibus itaque illo sit aliquam rerum in error voluptatibus aut non
     earum cum?
-  </p>
-</div>
+`;
+---
+
+<section
+  class="d-flex flex-column flex-md-row justify-content-center align-items-center"
+  id="our-values"
+>
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <h2 class="text-center display-2">{title}</h2>
+    <p class="lead fst-italic text-center text-wrap w-75">{text}</p>
+  </div>
+  <div>
+    <Picture
+      src={ValuesImage}
+      alt="value of company"
+      formats={["webp"]}
+      class:list={["img-fluid"]}
+    />
+  </div>
+</section>
 <style>
   #our-values {
-    height: 100dvh;
+    height: 75dvh;
   }
 </style>

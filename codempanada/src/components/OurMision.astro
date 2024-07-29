@@ -1,19 +1,37 @@
-<div
-  class="d-flex flex-column justify-content-center align-items-center"
+---
+import { Picture } from "astro:assets";
+
+import MisionImage from "../../public/mision.png";
+
+const title: Readonly<string> = `Mision`;
+const text: Readonly<string> = `
+  we as a company have a mission to develop, test and implement quality
+  software and libraries. every development will be done with best practices
+  in coding, documentation, architectures and more. we hope hundreds of
+  contributors will join us to reach more people.
+  `;
+---
+
+<section
+  class="d-flex flex-column flex-md-row justify-content-center align-items-center"
   id="our-mision"
 >
-  <h2 class="text-center display-2">Mision</h2>
-  <p class="lead fst-italic text-center text-wrap w-50">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sed debitis
-    nulla consequatur recusandae, illum incidunt perferendis expedita odio!
-    Excepturi, placeat sed minus nobis doloribus dolorem quos porro minima,
-    quidem maiores temporibus corporis. Neque, dolore reprehenderit veniam
-    necessitatibus itaque illo sit aliquam rerum in error voluptatibus aut non
-    earum cum?
-  </p>
-</div>
+  <div class="d-flex flex-column justify-content-center align-items-center flex-fill">
+    <h2 class="text-center display-2">{title}</h2>
+    <p class="lead fst-italic text-center text-wrap w-75">{text}</p>
+  </div>
+  <div class="flex-fill">
+    <Picture
+      src={MisionImage}
+      alt="mision of company"
+      formats={["webp"]}
+      class:list={["img-fluid"]}
+    />
+  </div>
+</section>
+
 <style>
   #our-mision {
-    height: 100dvh;
+    height: 75dvh;
   }
 </style>
