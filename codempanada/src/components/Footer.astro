@@ -3,18 +3,21 @@ interface SocialNetwork {
   title: string;
   url: string;
   nameSvg: string;
+  alt: string;
 }
 
 const ListIconSocialNetwork: Readonly<SocialNetwork[]> = Object.freeze([
   {
     title: "LinkedIn",
     nameSvg: "bi-linkedin",
-    url: "https://www.linkedin.com/company/codempanada/", // Change next feature
+    url: "https://www.linkedin.com/company/codempanada/",
+    alt: "Linkedin link"
   },
   {
     title: "Github",
     nameSvg: "bi-github",
     url: "https://github.com/Codempanada",
+    alt: "Github link"
   },
   // { title: "Gmail", nameSvg: "bi-mailbox", url: `/`},
   // { title: "Twitter", nameSvg: "bi-twitter-x", url: "/" },
@@ -35,8 +38,8 @@ const FooterLink: Readonly<ILink[]> = Object.freeze([
 ---
 
 <footer class="mt-5">
-  <div class="d-flex flex-column mx-auto" id="container-footer">
-    <div class="d-flex flex-column justify-content-center align-items-center">
+  <div class="d-flex flex-column mx-auto gap-2" id="container-footer">
+    <div class="d-flex flex-column justify-content-center align-items-center gap-3">
       <h5 class="display-5 text-center">¿How to contribute?</h5>
       <p class="text-wrap w-75">
         if you want to help us improve the code, first we invite you to read our
@@ -52,8 +55,9 @@ const FooterLink: Readonly<ILink[]> = Object.freeze([
       {
         ListIconSocialNetwork.map((item) => (
           <div class="p-2">
-            <a title={item.title} href={item.url} target="_blank">
-              <i class:list={["bi", item.nameSvg]} />
+            <a href={item.url} target="_blank" >
+              <title>{item.title}</title>
+              <i class:list={["bi", item.nameSvg]}  title={item.alt}/>
             </a>
           </div>
         ))
