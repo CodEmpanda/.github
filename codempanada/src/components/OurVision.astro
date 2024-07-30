@@ -5,12 +5,10 @@ import VisionImage from "../../public/vision.jpg";
 
 const title: Readonly<string> = `Vision`;
 const text: Readonly<string> = `
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sed debitis
-    nulla consequatur recusandae, illum incidunt perferendis expedita odio!
-    Excepturi, placeat sed minus nobis doloribus dolorem quos porro minima,
-    quidem maiores temporibus corporis. Neque, dolore reprehenderit veniam
-    necessitatibus itaque illo sit aliquam rerum in error voluptatibus aut non
-    earum cum?
+  our vision is to achieve worldwide success in software and code quality, 
+  demonstrating that perseverance, discipline and responsibility can make 
+  a difference in the world. We hope that every being on this planet can 
+  receive a piece of the magic that we want to emanate through this work.
 `;
 ---
 
@@ -32,7 +30,24 @@ const text: Readonly<string> = `
   </div>
 </section>
 <style>
-  #our-vision {
-    height: 75dvh;
+  @media (min-width: 320px) and (max-width: 599px) {
+    /* Smartphones, iPhone, teléfonos en modo retrato */
+    #our-vision {
+      height: 100vh;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    /* Tablets en modo retrato, iPad en modo retrato, e-readers (Nook/Kindle) */
+    #our-vision {
+      height: 75dvh;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    /* Tablets grandes en modo paisaje, laptops y escritorios */
+    #our-vision {
+      height: 75dvh;
+    }
   }
 </style>

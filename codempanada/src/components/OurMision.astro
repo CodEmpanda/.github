@@ -31,7 +31,24 @@ const text: Readonly<string> = `
 </section>
 
 <style>
-  #our-mision {
-    height: 75dvh;
+  @media (min-width: 320px) and (max-width: 599px) {
+    /* Smartphones, iPhone, teléfonos en modo retrato */
+    #our-mision {
+      height: 100dvh;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    /* Tablets en modo retrato, iPad en modo retrato, e-readers (Nook/Kindle) */
+    #our-mision {
+      height: 100dvh;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    /* Tablets grandes en modo paisaje, laptops y escritorios */
+    #our-mision {
+      height: 75dvh;
+    }
   }
 </style>

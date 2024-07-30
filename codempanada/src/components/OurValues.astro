@@ -5,12 +5,13 @@ import ValuesImage from "../../public/values.png";
 
 const title: Readonly<string> = `Values`;
 const text: Readonly<string> = `
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sed debitis
-    nulla consequatur recusandae, illum incidunt perferendis expedita odio!
-    Excepturi, placeat sed minus nobis doloribus dolorem quos porro minima,
-    quidem maiores temporibus corporis. Neque, dolore reprehenderit veniam
-    necessitatibus itaque illo sit aliquam rerum in error voluptatibus aut non
-    earum cum?
+    Since we founded this company, we strive to implement 
+    all processes: planning, development, testing and 
+    production of each software, with the responsibility 
+    to demonstrate quality in each one. We are always 
+    updating ourselves to know how we can develop software 
+    that benefits someone. We hope to create a community or 
+    simply get to have a wide audience that we feel part of it.
 `;
 ---
 
@@ -32,7 +33,24 @@ const text: Readonly<string> = `
   </div>
 </section>
 <style>
-  #our-values {
-    height: 75dvh;
+  @media (min-width: 320px) and (max-width: 599px) {
+    /* Smartphones, iPhone, teléfonos en modo retrato */
+    #our-values {
+      height: 100dvh;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    /* Tablets en modo retrato, iPad en modo retrato, e-readers (Nook/Kindle) */
+    #our-values {
+      height: 75dvh;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    /* Tablets grandes en modo paisaje, laptops y escritorios */
+    #our-values {
+      height: 75dvh;
+    }
   }
 </style>
