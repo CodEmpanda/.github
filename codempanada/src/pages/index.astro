@@ -2,7 +2,7 @@
 // Astro Base
 import Layout from "../layouts/Layout.astro";
 
-// Astro Components 
+// Astro Components
 import Hero from "../components/Hero.astro";
 import OurMision from "../components/OurMision.astro";
 import OurVision from "../components/OurVision.astro";
@@ -29,8 +29,26 @@ const Description: Readonly<string> = `
 </Layout>
 
 <style>
-  main{
-    width: 60%;
-    margin: 0 auto;
+  @media (min-width: 320px) and (max-width: 480px) {
+    /* Smartphones, iPhone, teléfonos en modo retrato */
+    main {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 801px) {
+    /* Tablets en modo retrato, iPad en modo retrato, e-readers (Nook/Kindle) */
+    main {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    /* Tablets grandes en modo paisaje, laptops y escritorios */
+    main {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 </style>
