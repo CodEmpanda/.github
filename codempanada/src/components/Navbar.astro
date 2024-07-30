@@ -15,30 +15,30 @@ const LinkNavbar: Readonly<ILink[]> = Object.freeze([
 
 <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
+    <a class="navbar-brand" href="/codempanada/">Navbar</a>
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         {
           LinkNavbar.map((item) => (
-          <li class="nav-item">
-          <a class="nav-link" href={item.url}>{item.name}</a>
-        </li>
+            <li class="nav-item">
+              <a class="nav-link" href={item.url}>
+                {item.name}
+              </a>
+            </li>
           ))
         }
       </ul>
-    </div>
-    <div class="d-flex">
-      <a class="navbar-brand" href="/codempanada">Codempanada</a>
     </div>
   </div>
 </nav>
